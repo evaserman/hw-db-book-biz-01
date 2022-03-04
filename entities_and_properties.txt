@@ -1,0 +1,56 @@
+QUESTION 1
+
+Entity 1: Books
+    Property: Book ID
+    Property: Genre
+    Property: AuthorID
+    Property: Publisher ID
+    Property: Price
+    Property: Title
+    Property: Editor ID
+Entity 2: Publishers
+    Property: Publisher ID
+    Property: Publisher Name
+    Property: Royalty Percentage
+Entity 3: Authors
+    AuthorID
+    FirstName
+    LastName
+Entity 4: Editors
+    EditorID
+    FirstName
+    LastName
+Entity 5: Orders
+    Book Order
+    Order ID
+    CustomerID
+    BookID
+Entity 6: Customers
+    CustomerID
+    FirstName
+    LastName
+
+QUESTION 2
+
+PK 1: BookID
+PK 2: PublisherID
+PK 3: AuthorID
+PK 4: EditorID
+PK 5: OrderID
+PK 6: CustomerID
+
+QUESTION 3
+
+Books, Authors, N:N
+Authors, Books, N:N
+Royalties, Books, N:N
+Royalties, Authors, N:1
+Books, Genres, N:N
+Books, Publishers, N:1
+Editors, Book, N:N
+Books, Editor, N:N
+Books, Order, N:1
+Orders, Book, N:1
+Books, Customer, N:1
+Orders, Customer, N:1
+
